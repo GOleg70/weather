@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffafa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #336699;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content-wrapper {
+  flex-grow: 1;
+  padding: 0 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 450px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #faebd7;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-search,
+.days-select {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fffaf0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.input-search:focus,
+.days-select:focus {
+  border-color: #336699;
+  box-shadow: 0 0 0 3px rgba(51, 102, 153, 0.2);
+  outline: none;
+}
+
+.title-weathe {
+  color: #336699;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+#count {
+  padding: 12px 25px;
+  background-color: #336699;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+#count:hover {
+  background-color: #2a527c;
+  transform: translateY(-1px);
+}
+
+#count:active {
+  background-color: #213e5d;
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ul-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.li-weather {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+
+.weather-date {
+  color: #336699;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.daily-summary {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.daily-summary img {
+  vertical-align: middle;
+}
+
+.hourly-forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.hourly-item {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: #fffaf0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-size: 0.9em;
+  width: calc(50% - 5px);
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  background-color: #eee;
+  padding: 15px 10px;
+  text-align: center;
+  color: #555;
+  margin-top: auto;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 375px) {
+  .main-content-wrapper {
+    padding: 0 20px; 
+    max-width: 400px; /
+  }
+
+  
+  .weather-date {
+    font-size: 1.3em;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .main-content-wrapper {
+    max-width: 700px; 
+    padding: 0; 
+  }
+
+  .form {
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+  }
+
+  .input-search,
+  .days-select {
+    flex-grow: 1; 
+    max-width: 250px; 
+  }
+  #count {
+    width: auto; 
+    flex-shrink: 0;
+  }
+
+  .ul-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .li-weather {
+    
+    width: calc(50% - 12.5px); 
+    max-width: none; 
+  }
+
+  .hourly-item {
+    
+    width: calc(33.333% - 6.666px); 
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .main-content-wrapper {
+    max-width: 1200px; 
+  }
+
+  .form {
+    gap: 20px;
+  }
+
+  .input-search,
+  .days-select {
+    max-width: 350px;
+  }
+
+  .ul-list {
+    gap: 30px;
+  }
+
+  .li-weather {
+    
+    width: calc(33.333% - 20px); 
+  }
+
+  .hourly-item {
+    
+    width: calc(25% - 7.5px); 
+  }
+}

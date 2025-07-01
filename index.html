@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Прогноз Погоди</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Прогноз Погоди за Містом та Днями</h1>
+    </header>
+
+    <div class="main-content-wrapper">
+      <form class="form" id="weatherForm">
+        <input
+          type="text"
+          class="input-search"
+          name="inputcity"
+          placeholder="Введіть місто або виберіть зі списку"
+          list="cities-list"
+        />
+        <datalist id="cities-list">
+          <option value="Підгородне"></option>
+          <option value="Павлоград"></option>
+        </datalist>
+
+        <select name="days" class="days-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+        <button id="count" type="submit">Пошук</button>
+      </form>
+
+      <ul class="ul-list">
+        <li>
+          <h1 class="title-weathe">
+            Введіть місто та натисніть "Пошук", щоб отримати прогноз погоди.
+          </h1>
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Прогноз Погоди</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
