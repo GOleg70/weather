@@ -1,4 +1,4 @@
-const BASE_URL = "http://api.weatherapi.com/v1";
+const BASE_URL = "https://api.weatherapi.com/v1";
 const API_KEY = "7c86c02e8b9741d787d81044252906"; 
 const formInput = document.querySelector(".form");
 const list = document.querySelector(".ul-list");
